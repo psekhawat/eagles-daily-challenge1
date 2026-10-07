@@ -1,0 +1,39 @@
+name: Generate Eagles Question
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 4 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate Eagles question
+        run: npm run generate
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-5
+
+      - name: Save new question
+        run: |
+          git config user.name "Eagles Daily Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/today.json
+          git diff --cached --quiet || git commit -m "Update daily Eagles question"
+          git push
