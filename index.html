@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#004C54">
+  <meta name="description" content="One Eagles question every day.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>Eagles Daily</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="eagle-mark">🦅</span><div><b>EAGLES</b><span>DAILY CHALLENGE</span></div></div>
+      <button id="shareTop" class="icon-btn" aria-label="Share">↗</button>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">TODAY'S CHALLENGE</div>
+      <h1>Fly higher.<br><em>Know more.</em></h1>
+      <p>One Eagles question. Four choices. Keep your streak alive.</p>
+      <div class="streak-pill"><span>🔥</span><b id="streak">0</b> day streak</div>
+    </section>
+
+    <section class="card quiz-card" id="quiz">
+      <div class="question-meta"><span id="dateLabel">TODAY</span><span id="difficulty">MEDIUM–HARD</span></div>
+      <h2 id="question">Loading today's challenge…</h2>
+      <div id="choices" class="choices"></div>
+      <button id="submit" class="primary" disabled>LOCK IN ANSWER</button>
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section class="stats">
+      <div><b id="best">0</b><span>Best streak</span></div>
+      <div><b id="accuracy">—</b><span>Accuracy</span></div>
+      <div><b id="played">0</b><span>Played</span></div>
+    </section>
+
+    <section class="share-card">
+      <div><span class="mini-eagle">🦅</span><div><b>Challenge a friend</b><p>Share today's question — the answer stays hidden.</p></div></div>
+      <button id="shareBtn">SHARE QUESTION</button>
+    </section>
+
+    <footer>Built for Eagles fans • One challenge per day</footer>
+  </main>
+<script src="app.js"></script>
+</body>
+</html>

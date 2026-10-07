@@ -1,0 +1,27 @@
+:root{
+  --green:#004C54; --deep:#001F24; --green2:#00656B; --silver:#A5ACAF;
+  --white:#F5F7F7; --muted:#B9C5C7; --card:#07343A; --line:#2D5D62;
+  --gold:#C7A85B; --good:#65D19A; --bad:#FF7C7C;
+}
+*{box-sizing:border-box} body{margin:0;background:
+radial-gradient(circle at 85% 0%,rgba(0,101,107,.45),transparent 35%),
+linear-gradient(160deg,#00181c,#00343b 55%,#001a1e);color:var(--white);
+font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.06;background-image:linear-gradient(135deg,#fff 1px,transparent 1px);background-size:18px 18px}
+.app-shell{width:min(100%,560px);margin:auto;padding:18px 18px 35px}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:4px 0 18px}
+.brand{display:flex;align-items:center;gap:10px}.brand b{display:block;letter-spacing:2px;font-size:15px}.brand span:not(.eagle-mark){display:block;font-size:8px;letter-spacing:2.2px;color:var(--silver);margin-top:2px}.eagle-mark{font-size:31px;filter:drop-shadow(0 4px 7px #0008)}
+.icon-btn{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:#ffffff10;color:white;font-size:20px}
+.hero{padding:22px 3px 24px}.eyebrow{font-size:11px;letter-spacing:2.5px;font-weight:800;color:var(--silver);margin-bottom:10px}
+h1{font-size:45px;line-height:.94;letter-spacing:-2px;margin:0 0 14px}h1 em{font-style:normal;color:#8DD2D2} .hero p{color:var(--muted);font-size:14px;line-height:1.5;max-width:390px}
+.streak-pill{display:inline-flex;align-items:center;gap:7px;background:#ffffff0d;border:1px solid #ffffff18;padding:9px 13px;border-radius:999px;font-size:12px}.streak-pill span{font-size:15px}
+.card{background:linear-gradient(150deg,#0a4147,#062b30);border:1px solid var(--line);box-shadow:0 18px 45px #0006;border-radius:22px;padding:20px}
+.question-meta{display:flex;justify-content:space-between;color:var(--silver);font-size:9px;font-weight:800;letter-spacing:1.7px}
+h2{font-size:22px;line-height:1.28;margin:18px 0}.choices{display:grid;gap:10px}.choice{width:100%;text-align:left;padding:15px 14px;border:1px solid #4b7377;background:#001f2499;border-radius:13px;color:white;font-size:14px;cursor:pointer;transition:.15s}
+.choice:hover{border-color:#8bc8ca;transform:translateY(-1px)}.choice.selected{border:2px solid #9ad7d8;background:#0b555b}.choice.correct{border-color:var(--good);background:#0b503e}.choice.wrong{border-color:var(--bad);background:#542d34}
+.primary{width:100%;margin-top:14px;padding:15px;border:0;border-radius:12px;background:linear-gradient(135deg,#8BCFD0,#5AAEB1);color:#00252a;font-weight:900;letter-spacing:1px;cursor:pointer}.primary:disabled{opacity:.4;cursor:not-allowed}
+.result{margin-top:15px;border-radius:12px;padding:13px;background:#001b20;color:var(--muted);font-size:13px;line-height:1.5}.result strong{color:white}.result.good{border:1px solid #397b62}.result.bad{border:1px solid #7b454b}
+.hidden{display:none}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:13px 0}.stats>div{background:#ffffff09;border:1px solid #ffffff12;border-radius:15px;text-align:center;padding:14px 5px}.stats b{display:block;font-size:21px}.stats span{display:block;color:var(--muted);font-size:9px;letter-spacing:.7px;text-transform:uppercase;margin-top:4px}
+.share-card{margin-top:9px;padding:15px;border:1px solid #ffffff14;border-radius:17px;background:#ffffff08;display:flex;align-items:center;justify-content:space-between;gap:12px}.share-card>div{display:flex;gap:10px;align-items:center}.mini-eagle{font-size:22px}.share-card b{font-size:13px}.share-card p{margin:3px 0 0;color:var(--muted);font-size:10px}.share-card button{border:1px solid #72999b;background:transparent;color:white;border-radius:9px;padding:9px;font-size:9px;font-weight:800;white-space:nowrap}
+footer{text-align:center;color:#6f8c8f;font-size:9px;letter-spacing:.7px;margin-top:23px}
+@media(max-width:390px){h1{font-size:39px}.share-card{align-items:flex-start;flex-direction:column}.share-card button{width:100%}}
